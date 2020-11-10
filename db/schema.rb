@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_29_180335) do
+ActiveRecord::Schema.define(version: 2020_11_10_170052) do
 
-  create_table "drivers", force: :cascade do |t|
+  create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.integer "points"
-    t.integer "wins"
+    t.string "country"
+    t.integer "budget"
+    t.integer "staff"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
