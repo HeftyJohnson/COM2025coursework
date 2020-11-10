@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :positions
   resources :races
   resources :tracks
   resources :drivers

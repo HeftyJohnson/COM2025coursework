@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pos:</strong>
+  <%= @position.pos %>
+</p>
+
+<p>
+  <strong>Drivers:</strong>
+  <%= @position.drivers %>
+</p>
+
+<p>
+  <strong>Race:</strong>
+  <%= @position.race %>
+</p>
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>
