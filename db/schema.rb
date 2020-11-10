@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_10_172009) do
+ActiveRecord::Schema.define(version: 2020_11_10_173141) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2020_11_10_172009) do
     t.string "country"
     t.integer "budget"
     t.integer "staff"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string "name"
+    t.integer "laps"
+    t.float "lapLength"
+    t.float "raceLength"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

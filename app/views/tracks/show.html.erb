@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @track.name %>
+</p>
+
+<p>
+  <strong>Laps:</strong>
+  <%= @track.laps %>
+</p>
+
+<p>
+  <strong>Laplength:</strong>
+  <%= @track.lapLength %>
+</p>
+
+<p>
+  <strong>Racelength:</strong>
+  <%= @track.raceLength %>
+</p>
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>
