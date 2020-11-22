@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home', to: 'site#home'
+
   resources :entries
   resources :positions
   resources :races
