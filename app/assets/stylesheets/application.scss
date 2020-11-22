@@ -14,11 +14,10 @@
  *= require_self
  */
 body {
-    background-color: #33CC33;
-    color: #333;
-    font-family: verdana, arials, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
+  background-image: url("F1 Background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 pre {
