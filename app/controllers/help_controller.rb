@@ -1,10 +1,10 @@
 class HelpController < ApplicationController
   def index
-    @contact = Help.new()
+    @contact = Help.new(params[:help])
   end
 
   def create
-    @contact = Help.new()
+    @contact = Help.new(params[:help])
     @contact.request = request
     respond_to do |format|
       if @contact.deliver

@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // app/assets/stylesheets/home.scss
 
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 
 .contact-form-text-area {
