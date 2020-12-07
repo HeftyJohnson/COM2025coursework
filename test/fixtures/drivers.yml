@@ -1,15 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: My Name
   age: 1
   titles: 1
   wins: 1
-  teams: one
+  teams: 1
 
-two:
-  name: MyString
-  age: 1
-  titles: 1
-  wins: 1
-  teams: two
+

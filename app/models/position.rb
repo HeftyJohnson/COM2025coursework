@@ -1,4 +1,5 @@
 class Position < ApplicationRecord
-  belongs_to :drivers
+  belongs_to :driver
   belongs_to :race
+  validates :race_id, :drivers_id, :pos, validates: true
 end
