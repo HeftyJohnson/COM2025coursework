@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'tracks', to: 'tracks#index'
   get 'drivers', to: 'drivers#index'
   get 'teams', to: 'teams#index'
+  get 'races', to: 'races#index'
   get 'help', to: 'help#index'
   resources :entries
   resources :positions
