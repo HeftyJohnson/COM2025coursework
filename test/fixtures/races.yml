@@ -3,9 +3,6 @@
 one:
   date: 2020-11-10
   name: MyString
-  track: one
+  track_id: one
 
-two:
-  date: 2020-11-10
-  name: MyString
-  track: two
+

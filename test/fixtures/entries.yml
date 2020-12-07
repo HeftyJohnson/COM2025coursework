@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  team: one
-  race: one
+  team_id: one
+  race_id: one
 
-two:
-  team: two
-  race: two
+

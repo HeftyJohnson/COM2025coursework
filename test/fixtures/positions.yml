@@ -2,10 +2,7 @@
 
 one:
   pos: 1
-  drivers: one
-  race: one
+  drivers_id: one
+  race_id: one
 
-two:
-  pos: 1
-  drivers: two
-  race: two
+
