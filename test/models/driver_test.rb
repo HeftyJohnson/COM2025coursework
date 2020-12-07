@@ -2,6 +2,10 @@ require 'test_helper'
 
 class DriverTest < ActiveSupport::TestCase
 
+  setup do
+    @team = teams(:one)
+  end
+
   test 'should not save empty driver' do
     driver = Driver.new
 
@@ -16,6 +20,6 @@ class DriverTest < ActiveSupport::TestCase
     driver.age = 1
     driver.titles = 0
     driver.wins = 0
-    driver.teams_id = 1
+    driver.teams_id = @team
   end
 end
