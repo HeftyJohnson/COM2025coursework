@@ -21,5 +21,8 @@ class DriverTest < ActiveSupport::TestCase
     driver.titles = 0
     driver.wins = 0
     driver.teams_id = @team
+
+    driver.save
+    assert driver.valid?
   end
 end
