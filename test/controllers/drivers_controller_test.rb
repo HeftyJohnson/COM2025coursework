@@ -3,6 +3,7 @@ require 'test_helper'
 class DriversControllerTest < ActionDispatch::IntegrationTest
   setup do
     @driver = drivers(:one)
+    @team = teams(:one)
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class DriversControllerTest < ActionDispatch::IntegrationTest
 
   test "should create driver" do
     assert_difference('Driver.count') do
-      post drivers_url, params: { driver: { age: @driver.age, name: @driver.name, teams_id: @driver.teams_id, titles: @driver.titles, wins: @driver.wins } }
+      post drivers_url, params: { driver: { age: @driver.age, name: @driver.name, team_id: @team, titles: @driver.titles, wins: @driver.wins } }
     end
 
     assert_redirected_to driver_url(Driver.last)
@@ -34,7 +35,7 @@ class DriversControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update driver" do
-    patch driver_url(@driver), params: { driver: { age: @driver.age, name: @driver.name, teams_id: @driver.teams_id, titles: @driver.titles, wins: @driver.wins } }
+    patch driver_url(@driver), params: { driver: { age: @driver.age, name: @driver.name, team_id: @team, titles: @driver.titles, wins: @driver.wins } }
     assert_redirected_to driver_url(@driver)
   end
 

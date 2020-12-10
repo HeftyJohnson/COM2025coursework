@@ -18,7 +18,8 @@ test 'should save valid race' do
 
   race.name = "My Race"
   race.date = "2020-12-08"
-  race.track_id = @track
+  race.track = @track
+
   race.save
   assert race.valid?
 end

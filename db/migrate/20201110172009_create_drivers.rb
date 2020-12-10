@@ -5,7 +5,7 @@ class CreateDrivers < ActiveRecord::Migration[5.2]
       t.integer :age
       t.integer :titles
       t.integer :wins
-      t.references :teams, foreign_key: true
+      t.references :team, foreign_key: true
 
       t.timestamps
     end

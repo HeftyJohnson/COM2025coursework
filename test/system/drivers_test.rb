@@ -16,7 +16,7 @@ class DriversTest < ApplicationSystemTestCase
 
     fill_in "Age", with: @driver.age
     fill_in "Name", with: @driver.name
-    fill_in "Teams", with: @driver.teams_id
+    fill_in "Teams", with: @driver.team_id
     fill_in "Titles", with: @driver.titles
     fill_in "Wins", with: @driver.wins
     click_on "Create Driver"
@@ -31,7 +31,7 @@ class DriversTest < ApplicationSystemTestCase
 
     fill_in "Age", with: @driver.age
     fill_in "Name", with: @driver.name
-    fill_in "Teams", with: @driver.teams_id
+    fill_in "Teams", with: @driver.team_id
     fill_in "Titles", with: @driver.titles
     fill_in "Wins", with: @driver.wins
     click_on "Update Driver"

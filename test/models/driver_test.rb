@@ -20,7 +20,7 @@ class DriverTest < ActiveSupport::TestCase
     driver.age = 1
     driver.titles = 0
     driver.wins = 0
-    driver.teams_id = @team
+    driver.team = @team
 
     driver.save
     assert driver.valid?

@@ -3,6 +3,7 @@ require 'test_helper'
 class RacesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @race = races(:one)
+    @track = tracks(:one)
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class RacesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create race" do
     assert_difference('Race.count') do
-      post races_url, params: { race: { date: @race.date, name: @race.name, track_id: @race.track_id } }
+      post races_url, params: { race: { date: @race.date, name: @race.name, track_id: @track } }
     end
 
     assert_redirected_to race_url(Race.last)
@@ -34,7 +35,7 @@ class RacesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update race" do
-    patch race_url(@race), params: { race: { date: @race.date, name: @race.name, track_id: @race.track_id } }
+    patch race_url(@race), params: { race: { date: @race.date, name: @race.name, track_id: @track } }
     assert_redirected_to race_url(@race)
   end
 
