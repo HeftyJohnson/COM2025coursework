@@ -18,7 +18,7 @@ class RacesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create race" do
     assert_difference('Race.count') do
-      post races_url, params: { race: { date: @race.date, name: @race.name, track_id: @track } }
+      post races_url, params: { race: { date: @race.date, name: @race.name, track_id: @track.id } }
     end
 
     assert_redirected_to race_url(Race.last)
@@ -35,7 +35,7 @@ class RacesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update race" do
-    patch race_url(@race), params: { race: { date: @race.date, name: @race.name, track_id: @track } }
+    patch race_url(@race), params: { race: { date: @race.date, name: @race.name, track_id: @track.id } }
     assert_redirected_to race_url(@race)
   end
 
