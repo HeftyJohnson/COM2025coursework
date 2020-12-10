@@ -3,6 +3,8 @@ require 'test_helper'
 class PositionsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @position = positions(:one)
+    @race = positions(:one)
+    @driver = positions(:one)
   end
 
   test "should get index" do
@@ -17,7 +19,7 @@ class PositionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create position" do
     assert_difference('Position.count') do
-      post positions_url, params: { position: { drivers_id: @position.drivers_id, pos: @position.pos, race_id: @position.race_id } }
+      post positions_url, params: { position: { driver_id: @driver.id, pos: @position.pos, race_id: @race.id } }
     end
 
     assert_redirected_to position_url(Position.last)
@@ -34,7 +36,7 @@ class PositionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update position" do
-    patch position_url(@position), params: { position: { drivers_id: @position.drivers_id, pos: @position.pos, race_id: @position.race_id } }
+    patch position_url(@position), params: { position: { driver_id: @driver.id, pos: @position.pos, race_id: @race.id } }
     assert_redirected_to position_url(@position)
   end
 

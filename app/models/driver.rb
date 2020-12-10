@@ -1,4 +1,5 @@
 class Driver < ApplicationRecord
   belongs_to :team
-  validates :name, :age, :titles, :wins, presence: true
+  has_many :positions
+  validates :name, :age, :titles, :wins, :team, presence: true
 end

@@ -3,6 +3,8 @@ require 'test_helper'
 class EntriesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @entry = entries(:one)
+    @race = races(:one)
+    @team = teams(:one)
   end
 
   test "should get index" do
@@ -17,7 +19,7 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create entry" do
     assert_difference('Entry.count') do
-      post entries_url, params: { entry: { race_id: @entry.race_id, team_id: @entry.team_id } }
+      post entries_url, params: { entry: { race_id: @race.id, team_id: @team.id } }
     end
 
     assert_redirected_to entry_url(Entry.last)
@@ -34,7 +36,7 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update entry" do
-    patch entry_url(@entry), params: { entry: { race_id: @entry.race_id, team_id: @entry.team_id } }
+    patch entry_url(@entry), params: { entry: { race_id: @race.id, team_id: @team.id } }
     assert_redirected_to entry_url(@entry)
   end
 
