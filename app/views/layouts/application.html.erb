@@ -13,8 +13,35 @@
   </div>
 
     <body>
+    <ul>
+      <li><%= link_to "Home", home_path, :class => current_class?(home_path) %></li>
+      <li><%= link_to "Drivers", drivers_path, :class => current_class?(drivers_path) %></li>
+      <li><%= link_to "Teams", teams_path, :class => current_class?(teams_path) %></li>
+      <li><%= link_to "Tracks", tracks_path, :class => current_class?(tracks_path) %></li>
+      <li><%= link_to "Races", races_path, :class => current_class?(races_path) %></li>
+      <li><%= link_to "Entries", entries_path, :class => current_class?(entries_path) %></li>
+      <li><%= link_to "Positions", positions_path, :class => current_class?(positions_path) %></li>
+      <li style="float:right"><%= link_to "Help", help_path, :class => current_class?(help_path) %></li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            $('#nav li a').each(function() {
+                if ($(this).attr('href') == $(location).attr('pathname')){
+                    $(this).parent().addClass("active")
+                }
+            })
+        })
+    </script>
+
     <%= yield %>
 
-
+    <footer>
+      <div class="Disclaimer">
+        <p>Disclaimer:</p>
+        <p>Due to poor time management and a complete overestimation of personal skill, some aspects of this site are not working as well or looking as polished as they could be.</p>
+        <p>My apologies.</p>
+      </div>
+    </footer>
     </body>
 </html>

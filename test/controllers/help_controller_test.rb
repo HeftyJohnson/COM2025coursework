@@ -5,5 +5,4 @@ class HelpControllerTest < ActionDispatch::IntegrationTest
     get help_index_url
     assert_response :success
   end
-
 end

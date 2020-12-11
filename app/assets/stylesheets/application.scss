@@ -15,17 +15,61 @@
  */
 
 .header{
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background: lightgray;
   color: black;
 }
 
 body {
-  background-color: #BBBBBB;
+  background-color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #BBBBBB;
+}
+
+li:last-child {
+  border-right: none;
+  border-left: 1px solid #BBBBBB;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111111;
+}
+
+.active {
+  background-color: #AAAAAA;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: lightgray;
+  color: black;
 }
 
 
