@@ -33,7 +33,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
+  background-color: darkgray;
 }
 
 li {
@@ -46,20 +46,32 @@ li:last-child {
   border-left: 1px solid #BBBBBB;
 }
 
-li a {
+li a, a:visited {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #111111;
+  color: white;
+  text-underline: white;
 }
 
-.active {
-  background-color: #AAAAAA;
+a.active {
+  background-color: black;
+  color: white;
+  text-underline: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
 }
 
 footer {
