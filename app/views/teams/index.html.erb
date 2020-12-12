@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teams</h1>
+<h1 class="centerText">Teams</h1>
 
-<table style="width:80%">
+<table class="centerTable">
   <thead>
     <tr>
       <th>Name</th>
       <th>Country</th>
       <th>Budget ($)</th>
       <th>Staff</th>
-      <th colspan="3"></th>
+      <th colspan="3">Tools</th>
     </tr>
   </thead>
 
@@ -29,6 +29,7 @@
 </table>
 
 <br>
-
-<%= link_to 'New Team', new_team_path %>
+<div class="centerText">
+  <%= link_to 'New Team', new_team_path, :class => 'button'%>
+</div>
 

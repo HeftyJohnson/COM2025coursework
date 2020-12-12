@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Drivers</h1>
+<h1 class="centerText">Drivers</h1>
 
-<table style="width:80%">
+<table class="centerTable">
   <thead>
     <tr>
       <th>Name</th>
@@ -32,5 +32,6 @@
 
 <br>
 
-<%= link_to 'New Driver', new_driver_path %>
-
+<div class="centerText">
+  <%= link_to 'New Driver', new_driver_path, :class => 'button'%>
+</div>

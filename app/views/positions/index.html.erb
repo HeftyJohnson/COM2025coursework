@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Positions</h1>
+<h1 class="centerText">Positions</h1>
 
-<table style="width:80%">
+<table class="centerTable">
   <thead>
     <tr>
       <th>Position</th>
       <th>Driver (ID)</th>
       <th>Race (ID)</th>
-      <th colspan="3"></th>
+      <th colspan="3">Tools</th>
     </tr>
   </thead>
 
@@ -27,6 +27,7 @@
 </table>
 
 <br>
-
-<%= link_to 'New Position', new_position_path %>
+<div class="centerText">
+  <%= link_to 'New Position', new_position_path, :class => 'button'%>
+</div>
 

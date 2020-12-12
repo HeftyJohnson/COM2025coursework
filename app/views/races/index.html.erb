@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Races</h1>
+<h1 class="centerText">Races</h1>
 
-<table style="width:80%">
+<table class="centerTable">
   <thead>
     <tr>
       <th>Date</th>
       <th>Name</th>
       <th>Track (ID)</th>
-      <th colspan="3"></th>
+      <th colspan="3">Tools</th>
     </tr>
   </thead>
 
@@ -28,8 +28,6 @@
 
 <br>
 
-<%= link_to 'New Race', new_race_path %>
-
-<form action="home">
-  <input type="submit" value = "Home"/>
-</form>
+<div class="centerText">
+<%= link_to 'New Race', new_race_path, :class => 'button'%>
+</div>

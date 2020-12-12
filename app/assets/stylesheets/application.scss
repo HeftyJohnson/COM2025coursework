@@ -14,7 +14,7 @@
  *= require_self
  */
 
-.header{
+.title{
   padding: 10px;
   text-align: center;
   background: lightgray;
@@ -26,6 +26,15 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.centerTable{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul {
@@ -65,13 +74,26 @@ a.active {
   text-underline: white;
 }
 
-table, th, td {
+td {
   border: 1px solid black;
 }
 
 th, td {
   padding: 15px;
   text-align: center;
+}
+
+.button {
+  background-color: #FAFAFA;
+  border: 1px solid black;
+  color: black;
+  padding: 1px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 footer {

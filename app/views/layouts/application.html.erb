@@ -6,7 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <div class="header">
+  <div class="title">
     <h1>
       Formula 1 2019
     </h1>
@@ -23,16 +23,6 @@
       <li><%= link_to "Positions", positions_path, :class => current_class?(positions_path) %></li>
       <li style="float:right"><%= link_to "Help", help_path, :class => current_class?(help_path) %></li>
     </ul>
-
-    <script>
-        $(document).ready(function() {
-            $('#nav li a').each(function() {
-                if ($(this).attr('href') == $(location).attr('pathname')){
-                    $(this).parent().addClass("active")
-                }
-            })
-        })
-    </script>
 
     <%= yield %>
 
