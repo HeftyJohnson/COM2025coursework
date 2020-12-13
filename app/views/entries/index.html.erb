@@ -14,11 +14,11 @@
   <tbody>
     <% @entries.each do |entry| %>
       <tr>
-        <td><%= entry.team %></td>
-        <td><%= entry.race %></td>
-        <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= entry.team_id %></td>
+        <td><%= entry.race_id %></td>
+        <td><%= link_to 'Show', entry, :class => 'button' %></td>
+        <td><%= link_to 'Edit', edit_entry_path(entry), :class => 'button' %></td>
+        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %></td>
       </tr>
     <% end %>
   </tbody>

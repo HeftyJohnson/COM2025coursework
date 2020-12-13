@@ -20,9 +20,9 @@
         <td><%= track.laps %></td>
         <td><%= track.lapLength %></td>
         <td><%= track.raceLength %></td>
-        <td><%= link_to 'Show', track %></td>
-        <td><%= link_to 'Edit', edit_track_path(track) %></td>
-        <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', track, :class => 'button' %></td>
+        <td><%= link_to 'Edit', edit_track_path(track), :class => 'button' %></td>
+        <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %></td>
       </tr>
     <% end %>
   </tbody>

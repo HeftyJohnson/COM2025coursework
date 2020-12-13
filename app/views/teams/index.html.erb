@@ -20,9 +20,9 @@
         <td><%= team.country %></td>
         <td><%= team.budget %></td>
         <td><%= team.staff %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', team, :class => 'button' %></td>
+        <td><%= link_to 'Edit', edit_team_path(team), :class => 'button' %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %></td>
       </tr>
     <% end %>
   </tbody>

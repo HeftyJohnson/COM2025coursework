@@ -17,10 +17,10 @@
       <tr>
         <td><%= race.date %></td>
         <td><%= race.name %></td>
-        <td><%= race.track %></td>
-        <td><%= link_to 'Show', race %></td>
-        <td><%= link_to 'Edit', edit_race_path(race) %></td>
-        <td><%= link_to 'Destroy', race, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= race.track_id %></td>
+        <td><%= link_to 'Show', race, :class => 'button' %></td>
+        <td><%= link_to 'Edit', edit_race_path(race), :class => 'button' %></td>
+        <td><%= link_to 'Destroy', race, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %></td>
       </tr>
     <% end %>
   </tbody>

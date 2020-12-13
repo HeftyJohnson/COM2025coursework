@@ -16,11 +16,11 @@
     <% @positions.each do |position| %>
       <tr>
         <td><%= position.pos %></td>
-        <td><%= position.driver %></td>
-        <td><%= position.race %></td>
-        <td><%= link_to 'Show', position %></td>
-        <td><%= link_to 'Edit', edit_position_path(position) %></td>
-        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= position.driver_id %></td>
+        <td><%= position.race_id %></td>
+        <td><%= link_to 'Show', position, :class => 'button' %></td>
+        <td><%= link_to 'Edit', edit_position_path(position), :class => 'button' %></td>
+        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button' %></td>
       </tr>
     <% end %>
   </tbody>
