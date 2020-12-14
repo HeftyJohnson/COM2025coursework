@@ -1,8 +1,9 @@
 class HelpController < ApplicationController
+  #Creates a help model
   def index
     @contact = Help.new(params[:help])
   end
-
+  #Creates a new Help model and returns different
   def create
     @contact = Help.new(params[:help])
     @contact.request = request

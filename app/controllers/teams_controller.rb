@@ -3,26 +3,20 @@ class TeamsController < ApplicationController
 
   # GET /teams
   # GET /teams.json
+  # Gets all of the team models in the database
   def index
     @teams = Team.all
   end
 
-  # GET /teams/1
-  # GET /teams/1.json
-  def show
-  end
-
   # GET /teams/new
+  # Creates an empty team model
   def new
     @team = Team.new
   end
 
-  # GET /teams/1/edit
-  def edit
-  end
-
   # POST /teams
   # POST /teams.json
+  # Creates a team model, adds data, and then saves it to the database
   def create
     @team = Team.new(team_params)
 
@@ -39,6 +33,7 @@ class TeamsController < ApplicationController
 
   # PATCH/PUT /teams/1
   # PATCH/PUT /teams/1.json
+  # Updates an existing team model
   def update
     respond_to do |format|
       if @team.update(team_params)
@@ -53,6 +48,7 @@ class TeamsController < ApplicationController
 
   # DELETE /teams/1
   # DELETE /teams/1.json
+  # Deletes a team model
   def destroy
     @team.destroy
     respond_to do |format|

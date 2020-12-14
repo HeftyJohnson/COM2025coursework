@@ -3,26 +3,20 @@ class DriversController < ApplicationController
 
   # GET /drivers
   # GET /drivers.json
+  # Gets all of the driver models in the database
   def index
     @drivers = Driver.all
   end
 
-  # GET /drivers/1
-  # GET /drivers/1.json
-  def show
-  end
-
   # GET /drivers/new
+  # Creates an empty driver model
   def new
     @driver = Driver.new
   end
 
-  # GET /drivers/1/edit
-  def edit
-  end
-
   # POST /drivers
   # POST /drivers.json
+  # Creates a driver model, adds data, and then saves it to the database
   def create
     @driver = Driver.new(driver_params)
 
@@ -39,6 +33,7 @@ class DriversController < ApplicationController
 
   # PATCH/PUT /drivers/1
   # PATCH/PUT /drivers/1.json
+  # Updates an existing driver model
   def update
     respond_to do |format|
       if @driver.update(driver_params)
@@ -53,6 +48,7 @@ class DriversController < ApplicationController
 
   # DELETE /drivers/1
   # DELETE /drivers/1.json
+  # Deletes a driver model
   def destroy
     @driver.destroy
     respond_to do |format|

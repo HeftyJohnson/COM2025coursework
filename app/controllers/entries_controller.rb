@@ -3,26 +3,20 @@ class EntriesController < ApplicationController
 
   # GET /entries
   # GET /entries.json
+  # Gets all of the entry models in the database
   def index
     @entries = Entry.all
   end
 
-  # GET /entries/1
-  # GET /entries/1.json
-  def show
-  end
-
   # GET /entries/new
+  # Creates an empty entry model
   def new
     @entry = Entry.new
   end
 
-  # GET /entries/1/edit
-  def edit
-  end
-
   # POST /entries
   # POST /entries.json
+  # Creates a entry model, adds data, and then saves it to the database
   def create
     @entry = Entry.new(entry_params)
 
@@ -39,6 +33,7 @@ class EntriesController < ApplicationController
 
   # PATCH/PUT /entries/1
   # PATCH/PUT /entries/1.json
+  # Updates an existing Entry model
   def update
     respond_to do |format|
       if @entry.update(entry_params)
@@ -53,6 +48,7 @@ class EntriesController < ApplicationController
 
   # DELETE /entries/1
   # DELETE /entries/1.json
+  # Deletes a entry model
   def destroy
     @entry.destroy
     respond_to do |format|

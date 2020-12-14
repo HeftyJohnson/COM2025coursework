@@ -3,26 +3,20 @@ class PositionsController < ApplicationController
 
   # GET /positions
   # GET /positions.json
+  # Gets all of the Position models in the database
   def index
     @positions = Position.all
   end
 
-  # GET /positions/1
-  # GET /positions/1.json
-  def show
-  end
-
   # GET /positions/new
+  # Creates an empty position model
   def new
     @position = Position.new
   end
 
-  # GET /positions/1/edit
-  def edit
-  end
-
   # POST /positions
   # POST /positions.json
+  # Creates a position model, adds data, and then saves it to the database
   def create
     @position = Position.new(position_params)
 
@@ -39,6 +33,7 @@ class PositionsController < ApplicationController
 
   # PATCH/PUT /positions/1
   # PATCH/PUT /positions/1.json
+  # Updates an existing position model
   def update
     respond_to do |format|
       if @position.update(position_params)
@@ -53,6 +48,7 @@ class PositionsController < ApplicationController
 
   # DELETE /positions/1
   # DELETE /positions/1.json
+  # Deletes a position model
   def destroy
     @position.destroy
     respond_to do |format|

@@ -3,26 +3,20 @@ class TracksController < ApplicationController
 
   # GET /tracks
   # GET /tracks.json
+  # Gets all of the track models in the database
   def index
     @tracks = Track.all
   end
 
-  # GET /tracks/1
-  # GET /tracks/1.json
-  def show
-  end
-
   # GET /tracks/new
+  # Creates an empty track model
   def new
     @track = Track.new
   end
 
-  # GET /tracks/1/edit
-  def edit
-  end
-
   # POST /tracks
   # POST /tracks.json
+  # Creates a track model, adds data, and then saves it to the database
   def create
     @track = Track.new(track_params)
 
@@ -39,6 +33,7 @@ class TracksController < ApplicationController
 
   # PATCH/PUT /tracks/1
   # PATCH/PUT /tracks/1.json
+  # Updates an existing track model
   def update
     respond_to do |format|
       if @track.update(track_params)
@@ -53,6 +48,7 @@ class TracksController < ApplicationController
 
   # DELETE /tracks/1
   # DELETE /tracks/1.json
+  # Deletes a track model
   def destroy
     @track.destroy
     respond_to do |format|

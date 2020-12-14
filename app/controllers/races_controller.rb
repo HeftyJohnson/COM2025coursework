@@ -3,26 +3,20 @@ class RacesController < ApplicationController
 
   # GET /races
   # GET /races.json
+  # Gets all of the race models in the database
   def index
     @races = Race.all
   end
 
-  # GET /races/1
-  # GET /races/1.json
-  def show
-  end
-
   # GET /races/new
+  # Creates an empty race model
   def new
     @race = Race.new
   end
 
-  # GET /races/1/edit
-  def edit
-  end
-
   # POST /races
   # POST /races.json
+  # Creates a race model, adds data, and then saves it to the database
   def create
     @race = Race.new(race_params)
 
@@ -39,6 +33,7 @@ class RacesController < ApplicationController
 
   # PATCH/PUT /races/1
   # PATCH/PUT /races/1.json
+  # Updates an existing race model
   def update
     respond_to do |format|
       if @race.update(race_params)
@@ -53,6 +48,7 @@ class RacesController < ApplicationController
 
   # DELETE /races/1
   # DELETE /races/1.json
+  # Deletes a race model
   def destroy
     @race.destroy
     respond_to do |format|
